@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--bootstrap-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    </head>
+    <style>
+        /*
+         TO DO:
+         - Make sidebar open on large screens and collapsed on smaller screens
+         - 
+         */ 
+        .box {
+            z-index: 2;
+            background-color: white;
+            height: 100%;
+            position: fixed;
+            width: 10.5%;
+        }
+        .vl {
+            border-left: 2px solid black;
+            height: 90%;
+            position: absolute;
+            left: 248px;
+            top: 5%;
+            bottom: 5%;
+}
+        .scrolling-wrapper-flexbox {
+            z-index: 1;
+            display: flex;
+            margin:0;
+            padding-left: 7%;
+            position:absolute;
+            width:100%;
+            height:94%;
+            top:50%;
+            padding-top: 3%;
+            padding-bottom: 3%;
+            transform:translate(0, -46%);
+
+        }
+        body {
+            overflow-y:hidden;
+        }
+        img {
+            max-height:90vh;
+            height:auto;
+            width:auto;
+            display: block;
+            padding-left: 8em;
+        }
+        
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 4;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            background-color: white;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 0px 8px 0px 32px;
+            text-decoration: none;
+            font-size: 23px;
+            color: black;
+            display: block;
+            transition: 0.0s;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 26px;
+            cursor: pointer;
+            background-color: transparent;
+            padding: 10px 15px;
+            border: none;
+            transition: .5s;
+            color: black;
+            position: fixed;
+            z-index: 5;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 15px;
+        }
+
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+        }
+
+
+        a:link, a:active, a:visited {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: none;
+            font-weight:bold;
+            color: black;
+        }
+    </style>
+    <title>
+        BAYNARD
+    </title>
+    <body>
+        <div id="mySidebar" class="sidebar">
+            <!-- <div class="vl"></div> -->
+            <a style="padding-bottom: 15%; font-weight: bold;" href="Featured.html">Owen&nbsp;Caldwell</a>
+            <a href="The Brandywine Valley.html">Brandywine&nbsp;Valley</a>
+            <a href="Peru.html">Peru</a>
+            <a href="Summer 2020.html">Summer&nbsp;2020</a>
+            <a href="Baynard.html">Baynard</a>
+            <a href="The Farm.html">The&nbsp;Farm</a>
+            <a style="padding-top: 15%;" href="Info.html">Contact</a>
+        </div>
+        <div id="main">
+          <button class="openbtn">></button>
+         </div>
+         <script>
+            var button = document.querySelector(".openbtn");
+           var ifOpenNav = 0
+           document.getElementById("mySidebar").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "200px";
+                   button.textContent = "<";  
+                  ifOpenNav = 1;
+           button.addEventListener("click", function() {
+                if (ifOpenNav == 0) {
+                    document.getElementById("mySidebar").style.width = "250px";
+                  document.getElementById("main").style.marginLeft = "200px";
+                   button.textContent = "<";  
+                  ifOpenNav = 1;
+               }
+               else {
+                       document.getElementById("mySidebar").style.width = "0";
+                      document.getElementById("main").style.marginLeft= "0";
+                       button.textContent = ">";
+                       ifOpenNav = 0;
+               }
+           })
+       </script>
+        <div class="scrolling-wrapper-flexbox">
+            <img src="images/baynard1.jpg">
+            <img src="images/baynard2.jpg">
+            <img src="images/baynard3.jpg">
+            <img src="images/baynard4.jpg">
+            <img src="images/baynard5.jpg">
+            <img src="images/baynard6.jpg">
+            <img src="images/baynard7.jpg">
+            <img src="images/baynard8.jpg">
+            <img src="images/baynard9.jpg">
+            <img src="images/baynard10.jpg">
+            <img src="images/baynard11.jpg">
+            <img src="images/baynard12.jpg">
+        </div>
+    </body>
+</html>
+
+ <!-- JS Hover for carrots, maybe I'll use this one day!
+        <script>
+            var a = document.querySelectorAll("a");
+            a[1].addEventListener("mouseover", function() {
+                this.innerText = ">Something 1";
+            });
+            a[1].addEventListener("mouseout", function() {
+                this.innerText="Something 1";
+            });
+            a[2].addEventListener("mouseover", function() {
+                this.innerText = ">Something 2";
+            });
+            a[2].addEventListener("mouseout", function() {
+                this.innerText="Something 2";
+            });
+            a[3].addEventListener("mouseover", function() {
+                this.innerText = ">Something 3";
+            });
+            a[3].addEventListener("mouseout", function() {
+                this.innerText="Something 3";
+            });
+                
+        </script>
+-->
