@@ -42,7 +42,6 @@
             left: 0;
             overflow-x: hidden;
             background-color: white;
-            transition: 0.5s;
             padding-top: 60px;
         }
 
@@ -74,20 +73,15 @@
             position: fixed;
             z-index: 5;
         }
-
-        #main {
-            transition: margin-left .5s;
-            padding: 15px;
-        }
-
     /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-        .sidebar {padding-top: 15px;}
+    @media screen and (max-width: 800px) {
+        .sidebar {width: 190px;}
         .sidebar a {font-size: 18px;}
+        .row {padding-left: 220px}
         }
 
         /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         .column {
             -ms-flex: 50%;
             flex: 50%;
@@ -96,11 +90,12 @@
     }
 
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 600px) {
         .column {
             -ms-flex: 100%;
             flex: 100%;
             max-width: 100%;
+            padding-top: 13%;
         }
         .sidebar {
             width: 0%
@@ -110,14 +105,62 @@
             padding-right: 5%;
         }
         .head {
-            text-align: center;
+            color: black;
+            position: fixed;
+            left: 40%;
+            top: 10px;
             font-size: 23px;
-            padding-top: 20px;
-            font-weight: bold
+            font-weight: bold;
             
         }
-    }
+        .overlay {
+            height: 0%;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255);
+            background-color: rgba(255,255,255, 0.9);
+            overflow-y: hidden;
+            transition: 0.5s;
+        }
+        .overlay-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .overlay a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.1s;
+        }
+        .overlay a:hover, .overlay a:focus {
+            color: #000000;
+        }
 
+        .overlay .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+        #hamburger {
+            color: black;
+            position: fixed;
+            font-size: 30px;
+            cursor: pointer;
+            padding-top: 8px;
+            top: 0px;
+            left: 5%;
+        }
+
+    }
         li a {
             color: black;
         }
@@ -134,7 +177,26 @@
         FEATURED
     </title>
     <body>
-        <div class="head">Featured</div>
+        <div class="head">Featured</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="#">About</a>
+              <a href="#">Services</a>
+              <a href="#">Clients</a>
+              <a href="#">Contact</a>
+            </div>
+          </div>
+        <script>
+            function openNav() {
+              document.getElementById("myNav").style.height = "100%";
+            }
+            
+            function closeNav() {
+              document.getElementById("myNav").style.height = "0%";
+            }
+        </script>
+
         <div id="mySidebar" class="sidebar">
             <!-- <div class="vl"></div> -->
             <a style="padding-bottom: 15%; font-weight: bold;" href="Featured.html">Owen&nbsp;Caldwell</a>
