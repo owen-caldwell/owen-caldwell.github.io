@@ -16,10 +16,8 @@
             display: flex;
             -ms-flex-wrap: wrap; /* IE10 */
             flex-wrap: wrap;
-            padding: 0 4px;
             padding-left: 285px;
             padding-right: 13px;
-            padding-top: 1.5%;
         }
 
         /* Create four equal columns that sits next to each other */
@@ -31,7 +29,7 @@
         }
 
         .column img {
-            margin-top: 20px;
+            padding-bottom: 20px;
             vertical-align: middle;
             max-width: 100%;
         }
@@ -98,11 +96,26 @@
     }
 
         /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 700px) {
         .column {
             -ms-flex: 100%;
             flex: 100%;
             max-width: 100%;
+            padding-left: 2%;
+            padding-right: 2%;
+        }
+        .sidebar {
+            width: 0%
+        }
+        .row {
+            padding-left: 0;
+        }
+        .top {
+            text-align: center;
+            font-size: 23px;
+            padding-top: 20px;
+            font-weight: bold
+            
         }
     }
 
@@ -122,6 +135,7 @@
         FEATURED
     </title>
     <body>
+        <div class="top">Owen Caldwell</div>
         <div id="mySidebar" class="sidebar">
             <!-- <div class="vl"></div> -->
             <a style="padding-bottom: 15%; font-weight: bold;" href="Featured.html">Owen&nbsp;Caldwell</a>
