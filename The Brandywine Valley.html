@@ -99,10 +99,11 @@
         body {
             overflow-y: visible;
         }
-        .head {  /*can't center text for some reason?*/
+        #head {  /*can't center text for some reason?*/
             color: black;
             position: fixed;
-            left: 24vw;
+            left: 50%;
+            margin-left: -122.19px; /* To center the text: set "left: 50%" and set "margin-left" to negative width of #head element divided by 2 */
             top: 10px;
             font-size: 23px;
             font-weight: bold;
@@ -172,7 +173,7 @@
     </title>
     <body>
         <div id="header"></div>
-        <div class="head">The Brandywine Valley</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
+        <div id="head">The Brandywine Valley</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
