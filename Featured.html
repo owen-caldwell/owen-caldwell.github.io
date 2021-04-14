@@ -55,23 +55,17 @@
         .overlay {
             visibility: hidden;
         }
-    /* On smaller screens change the style of the sidenav (less padding and a smaller font size) */
+
+    @media screen and (max-width: 1000px) {
+        .column {-ms-flex: 50%; flex: 50%; max-width: 50%;}
+    }
+    
     @media screen and (max-width: 800px) {
         .sidebar {width: 190px;}
         .sidebar a {font-size: 18px;}
         .row {padding-left: 220px}
         }
 
-        /* Responsive layout - makes a two column-layout instead of four columns */
-    @media screen and (max-width: 1000px) {
-        .column {
-            -ms-flex: 50%;
-            flex: 50%;
-            max-width: 50%;
-        }
-    }
-
-        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
     @media screen and (max-width: 600px) {
         .column {
             -ms-flex: 100%;
@@ -86,7 +80,7 @@
             padding-left: 5%;
             padding-right: 5%;
         }
-        .head {
+        #head {
             color: black;
             position: fixed;
             left: 40vw;
@@ -94,6 +88,12 @@
             font-size: 23px;
             font-weight: bold;
             
+        }
+        #header {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background-color: white;
         }
         .overlay {
             visibility: visible;
@@ -143,8 +143,8 @@
             top: 0px;
             left: 5%;
         }
-
     }
+
         a:link, a:active, a:visited {
             text-decoration: none;
         }
@@ -158,7 +158,8 @@
         FEATURED
     </title>
     <body>
-        <div class="head">Featured</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
+        <div id="header"></div>
+        <div id="head">Featured</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
@@ -194,30 +195,6 @@
             <a style="padding-top: 15%;" href="Info.html">Contact</a>
         </div>
         <div id="main">
-          <!-- <button class="openbtn">></button> -->
-         </div>
-    <!-- <script>
-         var button = document.querySelector(".openbtn");
-        var ifOpenNav = 0
-        document.getElementById("mySidebar").style.width = "250px";
-               document.getElementById("main").style.marginLeft = "200px";
-                button.textContent = "<";  
-               ifOpenNav = 1;
-        button.addEventListener("click", function() {
-             if (ifOpenNav == 0) {
-                 document.getElementById("mySidebar").style.width = "250px";
-               document.getElementById("main").style.marginLeft = "200px";
-                button.textContent = "<";  
-               ifOpenNav = 1;
-            }
-            else {
-                    document.getElementById("mySidebar").style.width = "0";
-                   document.getElementById("main").style.marginLeft= "0";
-                    button.textContent = ">";
-                    ifOpenNav = 0;
-            }
-        })
-    </script> -->
 
         <!-- Flexbox Photo Grid -->
     <div class="row"> 
@@ -256,28 +233,3 @@
   </div>
     </body>
 </html>
-
- <!-- JS Hover for carrots, maybe I'll use this one day!
-        <script>
-            var a = document.querySelectorAll("a");
-            a[1].addEventListener("mouseover", function() {
-                this.innerText = ">Something 1";
-            });
-            a[1].addEventListener("mouseout", function() {
-                this.innerText="Something 1";
-            });
-            a[2].addEventListener("mouseover", function() {
-                this.innerText = ">Something 2";
-            });
-            a[2].addEventListener("mouseout", function() {
-                this.innerText="Something 2";
-            });
-            a[3].addEventListener("mouseover", function() {
-                this.innerText = ">Something 3";
-            });
-            a[3].addEventListener("mouseout", function() {
-                this.innerText="Something 3";
-            });
-                
-        </script>
--->

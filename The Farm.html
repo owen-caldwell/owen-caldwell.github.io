@@ -35,8 +35,7 @@
             width:auto;
             display: block;
             padding-left: 10em;
-        }
-        
+        }   
         .sidebar {
             height: 100%;
             width: 275px;
@@ -49,7 +48,6 @@
             transition: 0.5s;
             padding-top: 60px;
         }
-
         .sidebar a {
             padding: 0px 8px 0px 32px;
             text-decoration: none;
@@ -107,7 +105,12 @@
             font-size: 23px;
             font-weight: bold;
             z-index: 3;
-            
+        }
+        #header {
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            background-color: white;
         }
         .overlay {
             visibility: visible;
@@ -140,7 +143,6 @@
         .overlay a:hover, .overlay a:focus {
             color: #000000;
         }
-
         .overlay .closebtn {
             position: absolute;
             z-index: 1;
@@ -165,6 +167,7 @@
         THE FARM
     </title>
     <body>
+        <div id="header"></div>
         <div class="head">The Farm</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
