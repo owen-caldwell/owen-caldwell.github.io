@@ -30,7 +30,7 @@
             font-weight: bold;
             z-index: 3;   
         }
-        img {
+        .scrolling-wrapper-flexbox img {
             max-height:90vh;
             height:auto;
             width:auto;
