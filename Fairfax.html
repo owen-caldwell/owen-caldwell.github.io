@@ -5,175 +5,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+        <link href="global.css" rel="stylesheet">
     </head>
     <style>
-        /*
-         TO DO:
-         - Make sidebar open on large screens and collapsed on smaller screens
-         - 
-         */ 
-        .scrolling-wrapper-flexbox {
-            z-index: 1;
-            display: flex;
-            margin:0;
-            padding-left: 7%;
-            position:absolute;
-            width:100%;
-            height:94%;
-            top:50%;
-            padding-top: 1.7%;
-            padding-bottom: 3%;
-            transform:translate(0, -46%);
-        }
-        body {
-            overflow-y:hidden;
-        }
-        img {
-            max-height:90vh;
-            height:auto;
-            width:auto;
-            display: block;
-            padding-left: 10em;
-        }
-        .sidebar {
-            height: 100%;
-            width: 275px;
-            position: fixed;
-            z-index: 4;
-            top: 0;
-            left: 0;
-            overflow-x: hidden;
-            background-color: white;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
-        .sidebar a {
-            padding: 0px 8px 0px 32px;
-            text-decoration: none;
-            font-size: 23px;
-            color: black;
-            display: block;
-            transition: 0.0s;
-        }
-        a:link, a:active, a:visited {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-            font-weight:bold;
-            color: black;
-        }
-        .overlay {visibility: hidden;}
-
-    /* On smaller screens change the style of the sidenav (less padding and a smaller font size) */
-    @media screen and (max-width: 800px) {
-        .sidebar {width: 190px;}
-        .sidebar a {font-size: 18px;}
-    }
-    
-    @media screen and (max-width: 600px) {
-
-        .sidebar {visibility: hidden;}
-        .overlay {visibility: visible;}
-
-        .scrolling-wrapper-flexbox {
-            -ms-flex-wrap: wrap; /* IE10 */
-            flex-wrap: wrap;
-            z-index: 1;
-            padding-left:5%;
-            padding-right:5%;
-            align-items: flex-start;
-        }
-        .scrolling-wrapper-flexbox img {
-            max-width: 100%;
-            max-height: auto;
-            padding-left: 0px;
-            display: block;
-            margin: 0 auto;
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
-        body {
-            overflow-y: visible;
-        }
-        #head {  /*can't center text for some reason?*/
-            color: black;
-            position: fixed;
-            left: 50%;
-            margin-left: -36.92px; /* To center the text: set "left: 50%" and set "margin-left" to negative width of #head element divided by 2 */
-            top: 10px;
-            font-size: 23px;
-            font-weight: bold;
-            z-index: 3;            
-        }
-        #header {
-            z-index: 2;
-            position: fixed;
-            width: 100%;
-            height: 60px;
-            background-color: white;
-        }
-        .overlay {
-            visibility: visible;
-            height: 0%;
-            width: 100%;
-            position: fixed;
-            z-index: 4;
-            top: 0;
-            left: 0;
-            background-color: rgb(255, 255, 255);
-            background-color: rgba(255,255,255, 0.9);
-            overflow-y: hidden;
-            transition: 0.5s;
-        }
-        .overlay-content {
-            padding: 8px;
-            position: relative;
-            top: 5%;
-            width: 100%;
-            text-align: center;
-            margin-top: 0px;
-        }
-        .overlay a {
-            text-decoration: none;
-            font-size: 30px;
-            color: #000000;
-            display: block;
-            transition: 0.1s;
-        }
-        .overlay a:hover, .overlay a:focus {
-            color: #000000;
-        }
-        .overlay .closebtn {
-            position: absolute;
-            z-index: 1;
-            top: 0px;
-            right: 30px;
-            font-size: 60px;
-        }
-        #hamburger {
-            color: black;
-            position: fixed;
-            font-size: 30px;
-            cursor: pointer;
-            padding-top: 8px;
-            top: 0px;
-            left: 5%;
-            z-index: 3;
-        }
-    }
-
     </style>
     <title>
         FAIRFAX
     </title>
     <body>
         <div id="header"></div>
-        <div id="head">Fairfax</div> <span id="hamburger" onclick="openNav()">&#9776;</span>
+        <div id="head"><a style="color: black;" href="Featured.html">Owen Caldwell</a></div>
+        <span id="hamburger" onclick="openNav()">&#9776;</span>
         <div id="myNav" class="overlay">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <div class="overlay-content">
-                <a style="padding-bottom: 5%;" href="Featured.html">Owen&nbsp;Caldwell</a>
                 <a href="The Brandywine Valley.html">Brandywine&nbsp;Valley</a>
                 <a href="COVID Summer.html">COVID&nbsp;Summer</a>
                 <a href="Peru.html">Peru</a>
@@ -194,7 +39,6 @@
         </script>
 
         <div id="mySidebar" class="sidebar">
-            <a style="padding-bottom: 15%;" href="Featured.html">Owen&nbsp;Caldwell</a>
             <a href="The Brandywine Valley.html">Brandywine&nbsp;Valley</a>
             <a href="COVID Summer.html">COVID&nbsp;Summer</a>
             <a href="Peru.html">Peru</a>
