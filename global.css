@@ -108,6 +108,11 @@ a:hover {
 .sidebar {visibility: hidden;}
 .overlay {visibility: visible;}
 #header {height: 50px;}
+#head {
+    top: 10px;
+    left: 50%;
+    margin-left: -73px; /* To center the text: set "left: 50%" and set "margin-left" to negative width of #head element divided by 2 */
+}
 
 .scrolling-wrapper-flexbox {
     -ms-flex-wrap: wrap; /* IE10 */
