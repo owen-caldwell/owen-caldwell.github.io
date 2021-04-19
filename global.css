@@ -37,6 +37,10 @@ body {
     position: fixed;
     z-index: 5;
 }
+#head img {
+    width: 149px;
+    height: 23px;
+}
 #header {
     z-index: 2;
     position: fixed;
