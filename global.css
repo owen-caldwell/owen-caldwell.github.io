@@ -57,14 +57,19 @@ body {
 }
 .textbox {
     color: black;
-    font-size: 15px;
+    font-family: Cambria;
+    font-size: 17px;
     min-width: 50vw;
     padding-left: 10em;
     padding-top: 10%;
 }
 .textbox p {
     font-style: italic;
-    
+    text-align: left;
+}
+.textbox li {
+    text-align: left;
+    list-style:none;
 }
 .sidebar {
     height: 100%;

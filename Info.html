@@ -6,37 +6,66 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<link href="global.css" rel="stylesheet">
 <style>
-	body {
-		background-image: url("Images/info.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position-x: left;
-		background-position-y: left;
-		background-attachment: fixed;
-
-	}
-	#Owen_Caldwell_Delaware__New_Yo {
-	left: 25px;
-	top: 68px;
-	position: absolute;
-	overflow: visible;
-	width: 606px;
-	white-space: nowrap;
-	line-height: 90px;
-	margin-top: -20px;
-	text-align: left;
-	font-family: Brother 1816;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 45px;
-	color: rgba(0,0,0,1);
-}
 </style>
 </head>
 <body>
-	<div id="Owen_Caldwell_Delaware__New_Yo">
-		<span>Owen Caldwell</span><br><span style="font-style:normal;font-weight:normal;">Delaware / New York City<br/>caldwellom@gmail.com<br/></span><br><span>Featured</span><br><span style="font-style:normal;font-weight:normal;">Vogue Italia - PhotoVogue<br/>Delaware News Journal<br/><br/></span><br><span style="font-family:Times New Roman;font-style:normal;font-weight:normal;color:rgba(255,255,255,1);"></span><br>
+	<div id="header"></div>
+	<div id="head"><a  href="Featured.html"><img src="head.png"></a></div>
+	<span id="hamburger" onclick="openNav()">&#9776;</span>
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="overlay-content">
+			<a href="The Brandywine Valley.html">Brandywine&nbsp;Valley</a>
+			<a href="COVID Summer.html">COVID&nbsp;Summer</a>
+			<a href="Peru.html">Peru</a>
+			<a href="Baynard.html">Baynard</a>
+			<a href="Fairfax.html">Fairfax</a>
+			<a href="The Farm.html">The&nbsp;Farm</a>
+			<a style="padding-top: 5%; font-weight: bold;" href="Info.html">Contact</a>
+		</div>
+	  </div>
+	<script>
+		function openNav() {
+		  document.getElementById("myNav").style.height = "100%";
+		}
+		
+		function closeNav() {
+		  document.getElementById("myNav").style.height = "0%";
+		}
+	</script>
+
+	<div id="mySidebar" class="sidebar">
+		<a href="The Brandywine Valley.html">Brandywine&nbsp;Valley</a>
+		<a href="COVID Summer.html">COVID&nbsp;Summer</a>
+		<a href="Peru.html">Peru</a>
+		<a href="Baynard.html">Baynard</a>
+		<a href="Fairfax.html">Fairfax</a>
+		<a href="The Farm.html">The&nbsp;Farm</a>
+		<a style="padding-top: 15%; font-weight: bold;" href="Info.html">Contact</a>
 	</div>
+	<div class="scrolling-wrapper-flexbox">
+		<div class="textbox">
+			<p>Owen Caldwell</p>
+			I am an 18 year old photographer from Wilmington, Delaware. 
+			My studio and on-location work mainly focuses on the lives 
+			of my friends and family.
+
+
+
+			<!-- <p style="padding-top: 5%">Work</p>
+			<li>list 1</li>
+			<li>list 1</li>
+			<li>list 1</li>
+			<li>list 1</li>
+			<li>list 1</li>
+			<li>list 1</li> -->
+
+
+		</div>
+		<img style="padding-right: 5em;" src="Images/contact 1.jpg">
+	</div>
+</body>
 </body>
 </html>
