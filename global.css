@@ -7,7 +7,7 @@ TO DO:
     z-index: 1;
     display: flex;
     margin:0;
-    padding-left: 7%;
+    padding-left: 3.5%;
     position:absolute;
     width:100%;
     height:94%;
@@ -58,7 +58,7 @@ body {
 .textbox {
     color: black;
     font-family: Cambria;
-    font-size: 17px;
+    font-size: 15px;
     min-width: 50vw;
     padding-left: 10em;
     padding-top: 10%;
@@ -71,6 +71,8 @@ body {
     text-align: left;
     list-style:none;
 }
+#abouttextbox { padding-left: 12em;}
+
 .sidebar {
     height: 100%;
     width: 220px;
@@ -86,7 +88,7 @@ body {
 .sidebar a {
     padding: 0px 8px 0px 32px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 15px;
     font-family: Cambria;
     color: black;
     display: block;
@@ -109,7 +111,6 @@ a:hover {
 /* On smaller screens change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-width: 800px) {
 .sidebar {width: 190px;}
-.sidebar a {font-size: 17px;}
 }
 
 @media screen and (max-width: 600px) {
@@ -144,6 +145,7 @@ a:hover {
     text-align: center;
     padding-left: 0;
 }
+#abouttextbox {padding-left: 0em;}
 body {
     overflow-y: visible;
 }
