@@ -63,7 +63,7 @@ body {
     padding-left: 10em;
     padding-top: 10%;
 }
-.textbox p {
+.textbox strong {
     font-style: italic;
     text-align: left;
 }
@@ -71,7 +71,7 @@ body {
     text-align: left;
     list-style:none;
 }
-#abouttextbox { padding-left: 12em;}
+#abouttextbox { padding-left: 12em; padding-top: 0;}
 
 .sidebar {
     height: 100%;
@@ -100,7 +100,6 @@ a:link, a:active, a:visited {
 }
 a:hover {
     text-decoration: none;
-    font-weight:bold;
     color: rgb(95, 0, 95);
 }
 
@@ -141,7 +140,7 @@ a:hover {
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.textbox {
+.textbox, .textbox li {
     text-align: center;
     padding-left: 0;
 }
