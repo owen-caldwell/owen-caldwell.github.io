@@ -6,15 +6,13 @@ TO DO:
 .scrolling-wrapper-flexbox {
     z-index: 1;
     display: flex;
-    margin:0;
+    margin: 0;
     padding-left: 3.5%;
-    position:absolute;
-    width:100%;
-    height:94%;
-    top:50%;
-    padding-top: 1.7%;
-    padding-bottom: 3%;
-    transform:translate(0, -46%);
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    top: 50%;
+    transform: translate(0, -46%);
 
 }
 body {
