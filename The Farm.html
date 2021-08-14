@@ -22,6 +22,20 @@
     <title>
         THE FARM
     </title>
+    <!-- Horizontal Scroll Script -->
+    <script>
+        function transformScroll(event) {
+        if (!event.deltaY) {
+            return;
+        }
+
+        event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
+        event.preventDefault();
+    }
+
+    var element = document.scrollingElement || document.documentElement;
+    element.addEventListener('wheel', transformScroll);
+    </script>
     <body>
         <div id="header"></div>
         <div id="head"><a  href="index.html"><img src="head.png"></a></div>
